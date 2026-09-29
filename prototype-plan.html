@@ -62,13 +62,17 @@
         </tr>
     </table>
     <h2>Effect decisions</h2>
-<p><strong>Effect 1 and purpose:</strong> Box-shadow gives the action control depth and provides visible feedback when it is pressed.</p>
-<p><strong>Effect 2 and purpose:</strong> An inset box-shadow creates an accent bar that makes the selected choice recognizable without relying on color alone.</p>
-<p><strong>What remains with effects removed:</strong> The action text, checkbox state, labels, and disclosure content still communicate their purpose without the decorative effects.</p>
+    <p><strong>Effect 1 and purpose:</strong> Box-shadow gives the action control depth and provides visible feedback
+        when it is pressed.</p>
+    <p><strong>Effect 2 and purpose:</strong> An inset box-shadow creates an accent bar that makes the selected choice
+        recognizable without relying on color alone.</p>
     <h2>Motion decisions</h2>
-    <p><strong>Transition properties and trigger:</strong> [Response]</p>
-    <p><strong>Keyframe purpose and trigger:</strong> [Response]</p>
-    <p><strong>Reduced-motion alternative:</strong> [Response]</p>
+    <p><strong>Transition properties and trigger:</strong> Transform and box-shadow transition when the action control
+        changes between its default, hover, and active states.</p>
+    <p><strong>Keyframe purpose and trigger:</strong> A short finite animation reveals the confirmation content when the
+        details element is opened.</p>
+    <p><strong>Reduced-motion alternative:</strong> When reduced motion is requested, transitions and animation are
+        removed while the visual state feedback remains available.</p>
     <h2>AI disclosure</h2>
     <p><strong>Tool and purpose, or none:</strong> [Response]</p>
     <p><strong>Accepted, changed, rejected, and verified:</strong> [Response]</p>
