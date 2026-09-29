@@ -1,0 +1,84 @@
+:root { 
+    --brand:#8c1d40; 
+    --accent:#ffc627; 
+    --ink:#191919; 
+    --paper:#fff; 
+    --surface:#f4f4f4; 
+    --focus:#0077b6; 
+    --space:1rem; 
+}
+* { 
+    box-sizing:border-box; 
+}
+body { 
+    margin:0; 
+    color:var(--ink); 
+    background:var(--surface); 
+    font:1rem/1.5 Arial,sans-serif; 
+}
+header, main { 
+    width:min(100% - 2rem,65rem); 
+    margin-inline:auto; 
+}
+header { 
+    padding-block:2rem 1rem; 
+}
+.eyebrow { 
+    color:var(--brand); 
+    font-weight:700; 
+    text-transform:uppercase; 
+    letter-spacing:.05em; 
+}
+.specimen { 
+    margin-block:var(--space); 
+    padding:1.25rem; 
+    background:var(--paper); 
+    border:1px solid #ccc; 
+    border-radius:.5rem; 
+}
+.action { 
+    display:inline-block; 
+    padding:.75rem 1rem; /* TODO: default action style and explicit transitions. */ 
+}
+.action::after { 
+    /* TODO: nonessential decorative cue; keep content empty. */ 
+}
+/* TODO: hover, focus-visible, and active action states. */
+
+.choice { 
+    display:grid; 
+    grid-template-columns:auto 1fr; 
+    gap:.75rem; 
+    align-items:start; 
+}
+.choice input { 
+    width:1.25rem; 
+    height:1.25rem; 
+    margin-top:.25rem; 
+}
+.choice label { 
+    display:grid; 
+    gap:.1rem; 
+    padding:.75rem; 
+    border:.15rem solid #777; 
+    border-radius:.4rem; 
+}
+.choice-title { 
+    font-weight:700; 
+}
+.choice-help { 
+    color:#444; 
+}
+/* TODO: focus and checked state with more than color. */
+
+summary { 
+    cursor:pointer; 
+    font-weight:700; 
+}
+.confirmation { 
+    margin-top:.75rem; 
+    padding:1rem; 
+}
+/* TODO: add purposeful gradients/shadows/filters/masks/blending across specimens. */
+/* TODO: define and trigger one short, finite keyframe animation. */
+/* TODO: add a prefers-reduced-motion strategy that preserves feedback. */
