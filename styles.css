@@ -38,13 +38,38 @@ header {
 }
 .action { 
     display:inline-block; 
-    padding:.75rem 1rem; /* TODO: default action style and explicit transitions. */ 
+    padding:.75rem 1rem; 
+    background: var(--brand);
+color: var(--paper);
+text-decoration: none;
+border-radius: .5rem;
+box-shadow: 0 .25rem 0 #5f132b;
+transition-property: transform, box-shadow;
+transition-duration: .15s;
+.action::after {
+  content: "";
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  margin-left: .5rem;
+  border-top: .15rem solid currentColor;
+  border-right: .15rem solid currentColor;
+  transform: rotate(45deg);
 }
-.action::after { 
-    /* TODO: nonessential decorative cue; keep content empty. */ 
+.action:hover {
+  transform: translateY(-.1rem);
+  box-shadow: 0 .35rem 0 #5f132b;
 }
-/* TODO: hover, focus-visible, and active action states. */
 
+.action:focus-visible {
+  outline: .2rem solid var(--focus);
+  outline-offset: .2rem;
+}
+
+.action:active {
+  transform: translateY(.15rem);
+  box-shadow: 0 .1rem 0 #5f132b;
+}
 .choice { 
     display:grid; 
     grid-template-columns:auto 1fr; 
@@ -69,8 +94,16 @@ header {
 .choice-help { 
     color:#444; 
 }
-/* TODO: focus and checked state with more than color. */
+.choice input:focus-visible + label {
+  outline: .2rem solid var(--focus);
+  outline-offset: .2rem;
+}
 
+.choice input:checked + label {
+  border-color: var(--brand);
+  box-shadow: inset .35rem 0 0 var(--accent);
+  font-weight: 700;
+}
 summary { 
     cursor:pointer; 
     font-weight:700; 
