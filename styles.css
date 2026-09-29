@@ -112,7 +112,6 @@ summary {
     margin-top:.75rem; 
     padding:1rem; 
 }
-/* TODO: add purposeful gradients/shadows/filters/masks/blending across specimens. */
 @keyframes reveal-confirmation {
   from {
     opacity: 0;
@@ -127,4 +126,12 @@ summary {
 details[open] .confirmation {
   animation: reveal-confirmation .25s ease-out 1;
 }
-/* TODO: add a prefers-reduced-motion strategy that preserves feedback. */
+@media (prefers-reduced-motion: reduce) {
+  .action {
+    transition: none;
+  }
+
+  details[open] .confirmation {
+    animation: none;
+  }
+}
