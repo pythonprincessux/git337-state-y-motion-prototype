@@ -17,7 +17,7 @@ body {
     font:1rem/1.5 Arial,sans-serif; 
 }
 header, main { 
-    width:min(100% - 2rem,65rem); 
+width:min(calc(100% - 2rem), 65rem);
     margin-inline:auto; 
 }
 header { 
@@ -46,6 +46,7 @@ border-radius: .5rem;
 box-shadow: 0 .25rem 0 #5f132b;
 transition-property: transform, box-shadow;
 transition-duration: .15s;
+}
 .action::after {
   content: "";
   display: inline-block;
